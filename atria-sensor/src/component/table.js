@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import { Table } from 'react-bootstrap';
 import styled from 'styled-components';
 
-
-const TableContainer = styled.div`
-
-`;
 
 export default function TableData(props){
     let seriesData = {...props.seriesData};
@@ -21,7 +17,7 @@ export default function TableData(props){
 
     const totalSum = seriesData.readingseries.reduce(sumOfArray, 0);
 
-    const meanOfArray = seriesData.readingseries.length!=0?(totalSum/seriesData.readingseries.length).toFixed(2):0;
+    const meanOfArray = seriesData.readingseries.length!==0?(totalSum/seriesData.readingseries.length).toFixed(2):0;
     
     return(
         <div 
@@ -51,8 +47,8 @@ export default function TableData(props){
                                     <td></td>
                                     <td></td>
                                     <td>
-                                        <span><b>Max: </b> {seriesData.readingseries.length!=0 ? Math.max.apply(null, seriesData.readingseries): 0} </span><br/>
-                                        <span><b>Min: </b> {seriesData.readingseries.length!=0 ? Math.min.apply(null, seriesData.readingseries): 0} </span><br/>
+                                        <span><b>Max: </b> {seriesData.readingseries.length!==0 ? Math.max.apply(null, seriesData.readingseries): 0} </span><br/>
+                                        <span><b>Min: </b> {seriesData.readingseries.length!==0 ? Math.min.apply(null, seriesData.readingseries): 0} </span><br/>
                                         <span><b>Sum: </b> {totalSum}</span><br/>
                                         <span><b>Mean: </b> {meanOfArray}</span><br/>
                                     </td>

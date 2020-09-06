@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Input from './component/input'; 
 import Graph from './component/graph';

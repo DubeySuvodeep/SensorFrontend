@@ -62,10 +62,6 @@ function Input(props){
         }
     }
 
-    function epochToJsDate(ts){
-        return new Date(ts*1000);
-    }
-
     function handleChange(event) {
         setSensorType(event.target.value);
     }
@@ -77,7 +73,7 @@ function Input(props){
             'end_date': endDate/1000,
             'sensor_type': sensorType
         };
-        let response = await axios.get(
+        await axios.get(
             'http://0.0.0.0:8000/api/v1/sensor-data/',
             {params: body}
         ).then((response, sensorType) => {
