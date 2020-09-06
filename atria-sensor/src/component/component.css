@@ -1,0 +1,19 @@
+.box {
+    height: 0px;
+    position: relative;
+    width: 80px;
+    left: 90px;
+  }
+  .box-1 {
+    position: absolute;
+    top: 90px;
+    
+  }
+  .box-2 {
+    position: absolute;
+    top: 130px;
+  }
+  .box-3 {
+    position: absolute;
+    top: 170px;
+  }
